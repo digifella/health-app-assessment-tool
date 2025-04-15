@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health App Assessment Framework - V1</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Chart.js included for potential future use, but inactive in this version -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Health App Assessment Framework - Self Assessment Tool (V1)</h1>
+
+        <form id="assessmentForm">
+
+            <!-- ========= Domain 0: General Information START ========= -->
+            <fieldset>
+                 <legend>General Information (Domain 0)</legend>
+                 <div class="form-group"> <label for="appName">0.1 What is the name of the App?</label> <input type="text" id="appName" name="appName" required> </div>
+                 <div class="form-group"> <label for="versionNumber">0.2 What version number is the App?</label> <input type="text" id="versionNumber" name="versionNumber" required> </div>
+                 <div class="form-group"> <label for="updateDate">0.2 When was it most recently updated?</label> <input type="date" id="updateDate" name="updateDate" required> </div>
+                 <div class="form-group"> <label for="developerName">0.3 Name of App manufacturer/developer contact:</label> <input type="text" id="developerName" name="developerName" required> </div>
+                 <div class="form-group"> <label for="developerEmail">0.3 Contact Email:</label> <input type="email" id="developerEmail" name="developerEmail" required> </div>
+                 <div class="form-group"> <label for="developerCountry">0.3 Contact Country:</label> <select id="developerCountry" name="developerCountry" required> <option value="" disabled selected>-- Select Country --</option> <option value="AU">Australia</option> <option value="NZ">New Zealand</option> <option value="GB">United Kingdom</option> <option value="US">United States</option> <option value="CA">Canada</option> <option value="SG">Singapore</option> <option value="OTHER">Other (Not Listed)</option> </select> </div>
+                 <div class="form-group"> <label for="developerTelephone">0.3 Contact Telephone:</label> <input type="tel" id="developerTelephone" name="developerTelephone"> </div>
+                 <div class="form-group"> <p>0.4 Is version/build number accessible in English?</p> <label><input type="radio" name="q0.4" value="yes" required> Yes</label> <label><input type="radio" name="q0.4" value="no"> No</label> </div>
+                 <!-- ** MODIFIED FOR MULTI-SELECT ** -->
+                 <div class="form-group">
+                     <label>0.5 App available via (Select all that apply):</label>
+                     <div class="checkbox-group">
+                         <label><input type="checkbox" name="appAvailability" value="appstore"> Apple App Store</label><br>
+                         <label><input type="checkbox" name="appAvailability" value="googleplay"> Google Play</label><br>
+                         <label><input type="checkbox" name="appAvailability" value="webapp"> WebApp</label><br>
+                         <label><input type="checkbox" name="appAvailability" value="lowcode"> Low/No-code Platform</label><br>
+                         <label><input type="checkbox" name="appAvailability" value="ai_ui"> AI Generated UI</label><br>
+                         <label><input type="checkbox" name="appAvailability" value="other"> Other</label>
+                     </div>
+                     <small>Please select at least one platform.</small>
+                 </div>
+                 <!-- ** END MODIFICATION ** -->
+                 <div class="form-group"> <label for="majorFocus">0.6 Major health focus and purpose:</label> <textarea id="majorFocus" name="majorFocus" rows="3" required></textarea> </div>
+                 <div class="form-group"> <label for="intendedUsers">0.7 Intended users (select primary):</label> <select id="intendedUsers" name="intendedUsers" required> <option value="" disabled selected>-- Select Users --</option> <option value="clinical">Clinical healthcare professionals</option> <option value="nonclinical_admin">Non-clinical healthcare administrator</option> <option value="patient_carer">Non-clinical, patient, carer, family</option> <option value="specific_condition">People with specific condition/disability</option> <option value="specific_group">Specific cultural/racial/linguistic group</option> <option value="public">General public</option> <option value="research">Health/medical research study</option> <option value="other">Other</option> </select> </div>
+            </fieldset>
+            <!-- ========= Domain 0: General Information END ========= -->
+
+            <!-- ========= Domain 1-5 Headers and Fieldsets START ========= -->
+            <!-- (Keep Domain 1-5 Headers and Fieldsets exactly as in the previous version) -->
+            <!-- Domain 1 Header -->
+            <div class="domain-header domain-header-acceptability"><h2>Domain 1: Acceptability & Culture</h2></div>
+            <fieldset data-domain-name="Acceptability & Culture" data-domain-code="acceptability">
+                <div class="question-group" data-question-id="1.1"> <p>1.1 Does use likely maintain/increase good health behaviours?</p> <label><input type="radio" name="q1.1" value="yes" required> Yes</label> <label><input type="radio" name="q1.1" value="no"> No</label> <label><input type="radio" name="q1.1" value="na"> N/A</label> </div>
+                <div class="question-group" data-question-id="1.2"> <p>1.2 Is the purpose clear and aligned positively?</p> <label><input type="radio" name="q1.2" value="yes" required> Yes</label> <label><input type="radio" name="q1.2" value="no"> No</label> <label><input type="radio" name="q1.2" value="na"> N/A</label> </div>
+                <div class="question-group" data-question-id="1.3"> <p>1.3 Is it culturally relevant/sensitive for specific groups claimed?</p> <label><input type="radio" name="q1.3" value="yes" required> Yes</label> <label><input type="radio" name="q1.3" value="no"> No</label> <label><input type="radio" name="q1.3" value="na"> N/A</label> </div>
+                <div class="question-group" data-question-id="1.4"> <p>1.4 Does it cater to needs of regional/rural/remote users?</p> <label><input type="radio" name="q1.4" value="yes" required> Yes</label> <label><input type="radio" name="q1.4" value="no"> No</label> <label><input type="radio" name="q1.4" value="na"> N/A</label> </div>
+                <div class="question-group" data-question-id="1.5"> <p>1.5 Does it provide means to restrict sensitive/objectionable content?</p> <label><input type="radio" name="q1.5" value="yes" required> Yes</label> <label><input type="radio" name="q1.5" value="no"> No</label> <label><input type="radio" name="q1.5" value="na"> N/A</label> </div>
+            </fieldset>
+            <!-- Domain 2 Header -->
+            <div class="domain-header domain-header-safety"><h2>Domain 2: Safety & Trustworthiness</h2></div>
+            <fieldset data-domain-name="Safety & Trustworthiness" data-domain-code="safety">
+                 <div class="question-group" data-question-id="2.1"> <p>2.1 Are restrictions/contraindications/limits/risks clearly communicated?</p> <label><input type="radio" name="q2.1" value="yes" required> Yes</label> <label><input type="radio" name="q2.1" value="no"> No</label> <label><input type="radio" name="q2.1" value="na"> N/A</label> </div>
+                 <div class="question-group" data-question-id="2.2"> <p>2.2 Evidence of conforming to safety-by-design principles?</p> <label><input type="radio" name="q2.2" value="yes" required> Yes</label> <label><input type="radio" name="q2.2" value="no"> No</label> <label><input type="radio" name="q2.2" value="na"> N/A</label> </div>
+                 <div class="question-group" data-question-id="2.3"> <p>2.3 Evidence for specific health claims/benefits from authoritative sources?</p> <label><input type="radio" name="q2.3" value="yes" required> Yes</label> <label><input type="radio" name="q2.3" value="no"> No</label> <label><input type="radio" name="q2.3" value="na"> N/A</label> </div>
+                 <div class="question-group" data-question-id="2.4"> <p>2.4 Is health information provided current?</p> <label><input type="radio" name="q2.4" value="yes" required> Yes</label> <label><input type="radio" name="q2.4" value="no"> No</label> <label><input type="radio" name="q2.4" value="na"> N/A</label> </div>
+                 <div class="question-group" data-question-id="2.5"> <p>2.5 Evidence of compliance with ethical codes (if not part of formal ethics review)?</p> <label><input type="radio" name="q2.5" value="yes" required> Yes</label> <label><input type="radio" name="q2.5" value="no"> No</label> <label><input type="radio" name="q2.5" value="na"> N/A</label> </div>
+                 <div class="question-group" data-question-id="2.6"> <p>2.6 Does the App claim safe operation (support channels, breach process, integration conformance)?</p> <label><input type="radio" name="q2.6" value="yes" required> Yes</label> <label><input type="radio" name="q2.6" value="no"> No</label> <label><input type="radio" name="q2.6" value="na"> N/A</label> </div>
+                 <div class="question-group" data-question-id="2.7"> <p>2.7 Are all costs clearly identified?</p> <label><input type="radio" name="q2.7" value="yes" required> Yes</label> <label><input type="radio" name="q2.7" value="no"> No</label> <label><input type="radio" name="q2.7" value="na"> N/A</label> </div>
+                 <div class="question-group" data-question-id="2.8"> <p>2.8 Is authorship/affiliations/interests/IP transparently disclosed?</p> <label><input type="radio" name="q2.8" value="yes" required> Yes</label> <label><input type="radio" name="q2.8" value="no"> No</label> <label><input type="radio" name="q2.8" value="na"> N/A</label> </div>
+                 <div class="question-group" data-question-id="2.9"> <p>2.9 Is advertising/sponsorship presence and source appropriately disclosed?</p> <label><input type="radio" name="q2.9" value="yes" required> Yes</label> <label><input type="radio" name="q2.9" value="no"> No</label> <label><input type="radio" name="q2.9" value="na"> N/A</label> </div>
+            </fieldset>
+             <!-- Domain 3 Header -->
+            <div class="domain-header domain-header-usability"><h2>Domain 3: Usability & Equity</h2></div>
+            <fieldset data-domain-name="Usability & Equity" data-domain-code="usability">
+                 <div class="question-group" data-question-id="3.1"> <p>3.1 (WebApps) Does it support WCAG 2.1 AA? (General) Accessibility designed/supported?</p> <label><input type="radio" name="q3.1" value="yes" required> Yes</label> <label><input type="radio" name="q3.1" value="no"> No</label> <label><input type="radio" name="q3.1" value="na"> N/A</label> </div>
+                 <div class="question-group" data-question-id="3.2"> <p>3.2 Was it designed/tested with intended target users?</p> <label><input type="radio" name="q3.2" value="yes" required> Yes</label> <label><input type="radio" name="q3.2" value="no"> No</label> <label><input type="radio" name="q3.2" value="na"> N/A</label> </div>
+                 <div class="question-group" data-question-id="3.3"> <p>3.3 Was it designed with needs of low digital literacy/disability access in mind?</p> <label><input type="radio" name="q3.3" value="yes" required> Yes</label> <label><input type="radio" name="q3.3" value="no"> No</label> <label><input type="radio" name="q3.3" value="na"> N/A</label> </div>
+                 <div class="question-group" data-question-id="3.4"> <p>3.4 Are instructions clear, easy to understand? Alerts for out-of-range/errors?</p> <label><input type="radio" name="q3.4" value="yes" required> Yes</label> <label><input type="radio" name="q3.4" value="no"> No</label> <label><input type="radio" name="q3.4" value="na"> N/A</label> </div>
+            </fieldset>
+             <!-- Domain 4 Header -->
+            <div class="domain-header domain-header-privacy"><h2>Domain 4: Privacy & Security</h2></div>
+            <fieldset data-domain-name="Privacy & Security" data-domain-code="privacy">
+                 <div class="question-group" data-question-id="4.1"> <p>4.1 Does it comply with relevant AU privacy policies (storage, location)?</p> <label><input type="radio" name="q4.1" value="yes" required> Yes</label> <label><input type="radio" name="q4.1" value="no"> No</label> <label><input type="radio" name="q4.1" value="na"> N/A</label> </div>
+                 <div class="question-group" data-question-id="4.2"> <p>4.2 Is there clear info on how user-derived data is used (algorithms, decisions)?</p> <label><input type="radio" name="q4.2" value="yes" required> Yes</label> <label><input type="radio" name="q4.2" value="no"> No</label> <label><input type="radio" name="q4.2" value="na"> N/A</label> </div>
+                 <div class="question-group" data-question-id="4.3"> <p>4.3 Does App provide user control over personal data (access, view, download, understand, erase)?</p> <label><input type="radio" name="q4.3" value="yes" required> Yes</label> <label><input type="radio" name="q4.3" value="no"> No</label> <label><input type="radio" name="q4.3" value="na"> N/A</label> </div>
+                 <div class="question-group" data-question-id="4.4"> <p>4.4 Is explicit consent obtained before collecting/using personal data beyond primary intent (e.g. AI training)?</p> <label><input type="radio" name="q4.4" value="yes" required> Yes</label> <label><input type="radio" name="q4.4" value="no"> No</label> <label><input type="radio" name="q4.4" value="na"> N/A</label> </div>
+                 <div class="question-group" data-question-id="4.5"> <p>4.5 Does App/website disclose third parties, how they use data, termination, retention/destruction?</p> <label><input type="radio" name="q4.5" value="yes" required> Yes</label> <label><input type="radio" name="q4.5" value="no"> No</label> <label><input type="radio" name="q4.5" value="na"> N/A</label> </div>
+                 <div class="question-group" data-question-id="4.6"> <p>4.6 Does App adhere to secure storage/exchange/messaging standards? Strong encryption? Conformance for health record access?</p> <label><input type="radio" name="q4.6" value="yes" required> Yes</label> <label><input type="radio" name="q4.6" value="no"> No</label> <label><input type="radio" name="q4.6" value="na"> N/A</label> </div>
+                 <div class="question-group" data-question-id="4.7"> <p>4.7 (If required) Does App implement secure authentication (MFA, biometrics etc)?</p> <label><input type="radio" name="q4.7" value="yes" required> Yes</label> <label><input type="radio" name="q4.7" value="no"> No</label> <label><input type="radio" name="q4.7" value="na"> N/A</label> </div>
+            </fieldset>
+            <!-- Domain 5 Header -->
+            <div class="domain-header domain-header-technical"><h2>Domain 5: Technical & Quality</h2></div>
+            <fieldset data-domain-name="Technical & Quality" data-domain-code="technical">
+                 <div class="question-group" data-question-id="5.1"> <p>5.1 Is App in supported state (beyond beta)? Compliant with ISO/TS 82304-2:2021 or similar?</p> <label><input type="radio" name="q5.1" value="yes" required> Yes</label> <label><input type="radio" name="q5.1" value="no"> No</label> <label><input type="radio" name="q5.1" value="na"> N/A</label> </div>
+                 <div class="question-group" data-question-id="5.2"> <p>5.2 Is App technically reliable during usage on wide range of platforms?</p> <label><input type="radio" name="q5.2" value="yes" required> Yes</label> <label><input type="radio" name="q5.2" value="no"> No</label> <label><input type="radio" name="q5.2" value="na"> N/A</label> </div>
+                 <div class="question-group" data-question-id="5.3"> <p>5.3 (If AI/ML used) Has it been examined for biases/training errors?</p> <label><input type="radio" name="q5.3" value="yes" required> Yes</label> <label><input type="radio" name="q5.3" value="no"> No</label> <label><input type="radio" name="q5.3" value="na"> N/A</label> </div>
+                 <div class="question-group" data-question-id="5.4"> <p>5.4 (If AI/ML used) Is it compliant with consumer laws, reviewed for unethical behaviours?</p> <label><input type="radio" name="q5.4" value="yes" required> Yes</label> <label><input type="radio" name="q5.4" value="no"> No</label> <label><input type="radio" name="q5.4" value="na"> N/A</label> </div>
+                 <div class="question-group" data-question-id="5.5"> <p>5.5 Is App available across different devices/OS/screen sizes for expected community?</p> <label><input type="radio" name="q5.5" value="yes" required> Yes</label> <label><input type="radio" name="q5.5" value="no"> No</label> <label><input type="radio" name="q5.5" value="na"> N/A</label> </div>
+                 <div class="question-group" data-question-id="5.6"> <p>5.6 Does App provide user with technical support?</p> <label><input type="radio" name="q5.6" value="yes" required> Yes</label> <label><input type="radio" name="q5.6" value="no"> No</label> <label><input type="radio" name="q5.6" value="na"> N/A</label> </div>
+                 <div class="question-group" data-question-id="5.7"> <p>5.7 Is there comprehensive/clear documentation for users/developers?</p> <label><input type="radio" name="q5.7" value="yes" required> Yes</label> <label><input type="radio" name="q5.7" value="no"> No</label> <label><input type="radio" name="q5.7" value="na"> N/A</label> </div>
+            </fieldset>
+            <!-- ========= Domain 1-5 Headers and Fieldsets END ========= -->
+
+            <!-- ========= Submit Button START ========= -->
+            <button type="submit">Calculate Score & Generate Report</button>
+            <!-- ========= Submit Button END ========= -->
+
+        </form> <!-- ========= Form END ========= -->
+
+        <!-- ========= Results Area START ========= -->
+        <div id="results" style="display: none; margin-top: 30px;">
+            <h2>Assessment Results</h2>
+            <div id="scoreTableContainer"><!-- Score table will be generated here by JS --></div>
+            <!-- Radar chart canvas (Commented out) -->
+            <!-- <div style="max-width: 500px; margin: 20px auto;"><canvas id="radarChart"></canvas></div> -->
+            <div id="dataExport" style="margin-top: 20px;">
+                <h3>Data for Submission (Simulated Save)</h3>
+                <pre id="jsonDataOutput"></pre>
+            </div>
+        </div>
+        <!-- ========= Results Area END ========= -->
+
+    </div> <!-- ========= Container END ========= -->
+
+    <script src="script.js"></script>
+</body>
+</html>

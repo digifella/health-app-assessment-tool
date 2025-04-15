@@ -1,0 +1,219 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+h2 {
+     color: #333; /* Default color, overridden by domain headers */
+     text-align: center;
+     margin-bottom: 20px;
+}
+
+h3 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+/* Styling for the Domain Headers */
+.domain-header {
+    padding: 12px 20px;
+    margin-bottom: 0;
+    margin-top: 30px; /* Space above header */
+    color: #ffffff; /* White text default */
+    border-radius: 5px 5px 0 0; /* Rounded top corners */
+    border: 1px solid rgba(0,0,0,0.1);
+    border-bottom: none;
+}
+
+.domain-header h2 {
+    margin: 0;
+    font-size: 1.4em;
+    font-weight: bold;
+    text-align: left;
+    color: inherit; /* Inherit color (white default) from parent */
+}
+
+/* Background Colors matching the Framework PDF */
+.domain-header-acceptability { background-color: #FFCA28; color: #333; /* Darker text for yellow */}
+.domain-header-safety         { background-color: #26A69A; }
+.domain-header-usability      { background-color: #AB47BC; }
+.domain-header-privacy        { background-color: #26C6DA; }
+.domain-header-technical      { background-color: #FF7043; }
+
+
+/* Adjust Fieldset styling to connect with header */
+fieldset {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 0 0 5px 5px; /* Rounded bottom corners */
+    margin-top: 0; /* Remove top margin */
+    border-top: none; /* Remove top border */
+}
+/* General Info fieldset doesn't have a custom header above it */
+fieldset:first-of-type { /* Style the first fieldset (General Info) normally */
+     margin-top: 0;
+     border-radius: 5px;
+     border-top: 1px solid #ccc;
+}
+fieldset legend { /* Keep legend for the first fieldset */
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #555;
+    padding: 0 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label { /* General label style */
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.question-group {
+    margin-bottom: 15px;
+    padding: 12px;
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+
+.question-group p {
+    margin: 0 0 10px 0;
+    font-weight: 500;
+    cursor: help; /* Indicate tooltip is available */
+}
+
+/* Specific style for radio button labels */
+.question-group > label {
+     display: inline-block;
+     margin-right: 15px;
+     font-weight: normal;
+}
+
+/* Styles for the App Availability Checkbox Group */
+.checkbox-group label {
+    display: block; /* Make each checkbox appear on a new line */
+    margin-bottom: 5px;
+    font-weight: normal; /* Keep label text normal weight */
+}
+.checkbox-group br { /* Hide the <br> tags visually if using block labels */
+    display: none;
+}
+
+.form-group small { /* Style the helper text */
+    display: block;
+    margin-top: 5px;
+    color: #777;
+    font-size: 0.9em;
+}
+
+/* Styling for the results table */
+#scoreTableContainer {
+    margin-top: 20px;
+    margin-bottom: 20px; /* Add space below table */
+}
+#scoreTableContainer table {
+    width: 100%;
+    border-collapse: collapse;
+}
+#scoreTableContainer th,
+#scoreTableContainer td {
+    border: 1px solid #ddd;
+    padding: 10px 12px; /* Slightly more padding */
+    text-align: left;
+}
+#scoreTableContainer th {
+    background-color: #e9f7ef; /* Light green header */
+    font-weight: bold;
+}
+#scoreTableContainer td:last-child {
+    text-align: right; /* Align scores to the right */
+    font-weight: bold;
+    min-width: 80px; /* Ensure score column has some width */
+}
+
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px; /* Add some space above button */
+}
+
+button[type="submit"]:hover {
+    background-color: #4cae4c;
+}
+
+#results {
+    padding: 20px;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    background-color: #fafffa; /* Very light green background for results area */
+}
+#results h2 {
+     color: #3c763d; /* Darker green for results heading */
+     margin-bottom: 15px;
+}
+#results h3 {
+     color: #555;
+     margin-bottom: 10px;
+     margin-top: 25px; /* Space above JSON header */
+}
+
+
+#jsonDataOutput {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    padding: 15px;
+    font-family: monospace;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    max-height: 300px;
+    overflow-y: auto;
+    border-radius: 4px;
+}
