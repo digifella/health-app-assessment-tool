@@ -2,11 +2,25 @@
 // !! IMPORTANT !! Replace these placeholder explanations with the specific,
 // detailed text from the "Further notes" columns in the Framework PDF for each question.
 const questionTooltips = {
-    "1.1": "Explanation: Assess if the app encourages positive health actions aligned with user well-being, considering specific goals if applicable. Document evidence like goal-setting features or alignment with public health guidance.",
-    "1.2": "Explanation: Ensure the app's purpose, target users, benefits, and expected outcomes are clearly defined and understandable. Documentation should cover Population, Aim, Service/Setting, and Cost transparency.",
-    "1.3": "Explanation: Consider if the app needs to address specific cultural sensitivities (Aboriginal/Torres Strait Islander, CALD, LGBTQIA+, disability, neurodiversity, trauma-informed approaches). Document how the app supports these groups if applicable, or confirm broad usability.",
-    "1.4": "Explanation: Document how the app supports users in regional, rural, or remote areas. Consider offline functionality, 'catch-up' features, use of location/contextual info, and testing within these communities.",
-    "1.5": "Explanation: Document how the app restricts access to potentially sensitive or harmful content (e.g., explicit images, age-restricted topics) using mechanisms like content warnings or age gates.",
+    "1.1": "Explanation: If the App has ability to set goals that are specific, measurable and achievable with respect to positive health alignment or wellbeing the developer shall have documented evidence that the goals are specified/obvious within the App. 
+
+More generally the developer shall document evidence as to how the App will maintain or increase good health related behaviours for the expected users (e.g. by evidence from trials and/or alignment to relevant public health guidance).
+",
+    "1.2": "Explanation: The developer shall have documented the Health App description and collected evidence or feedback that it is clear, comprehensive and designed to maintain or increase good health related behaviours e.g. through information about: 
+
+• Population: The intended users are clearly defined. 
+• Aim: The aim of the App, user benefit from the App, and the expected outcome are provided.
+• Service/Setting: The App provides information about what services or functionalities it offers. 
+• Cost: The price of the App or services are presented appropriately. There is transparency around any costs (including in-App purchases, and “premium” product purchases).
+",
+    "1.3": "Explanation: This general framework may not be suitable for considering Apps designed for specific cultures or groups. Nonetheless, developers shall consider and document whether their Apps involve any culturally relevant or culturally sensitive aspects in the context of the expected user audience. 
+
+As stated above, apps developed for, or expected to be used specifically by, Aboriginal and Torres Straits Islander communities should be assessed in alignment with appropriate cultural domain questions and any frameworks developed for those communities e.g. see footnote. 
+
+Where the intent of the App is for broad use, the developer shall still consider whether the audience might include specific communities, and if so, the developer shall document the evidence as to how the App is expected to be usable by, and if relevant, support such groups or communities.
+",
+    "1.4": "Explanation: The developer shall document evidence on how the Health App will be usable by, and support the needs of regional, rural or remote areas of Australia including (for example) whether the App functions when offline, and if so whether it has a “catch-up” facility for when it is back online, and/or whether it uses location information or local contextual information to assist such communities and shall document whether it has been tested for use by such communities.",
+    "1.5": "Explanation: The developer shall document evidence of how the App can restrict access to be sensitive including information or images of body parts or other aspects likely to be restricted by law to the viewing by minors or the non-intended recipient. For example, an App providing information on a health-related topic should not have images of body parts visible without being behind a content restriction mechanism and/or provided with suitable warnings.",
     "2.1": "Explanation: Clearly state all limitations (age, internet needs, time commitment, user qualifications) and risks. If for consumer use, include a disclaimer that it doesn't replace professional advice. If for clinical use, state this clearly.",
     "2.2": "Explanation: Provide evidence of using 'safety-by-design' principles during development and operation. Document any ethical review processes undertaken regarding safety.",
     "2.3": "Explanation: If the app makes specific health claims (e.g., improves a condition), provide supporting evidence from authoritative sources (registrations, peer-reviewed studies, public health guidelines) accessible within the app or documentation. Note if evidence has been disputed.",
