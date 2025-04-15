@@ -3,20 +3,19 @@
 const questionTooltips = {
     "1.1": `Explanation: If the App has ability to set goals that are specific, measurable and achievable with respect to positive health alignment or wellbeing the developer shall have documented evidence that the goals are specified/obvious within the App.
 
-More generally the developer shall document evidence as to how the App will maintain or increase good health related behaviours for the expected users (e.g. by evidence from trials and/or alignment to relevant public health guidance).`, // Uses backticks `` ` ``
-
+More generally the developer shall document evidence as to how the App will maintain or increase good health related behaviours for the expected users (e.g. by evidence from trials and/or alignment to relevant public health guidance).`, // Uses backticks 
     "1.2": `Explanation: The developer shall have documented the Health App description and collected evidence or feedback that it is clear, comprehensive and designed to maintain or increase good health related behaviours e.g. through information about:
 
 • Population: The intended users are clearly defined.
 • Aim: The aim of the App, user benefit from the App, and the expected outcome are provided.
 • Service/Setting: The App provides information about what services or functionalities it offers.
-• Cost: The price of the App or services are presented appropriately. There is transparency around any costs (including in-App purchases, and “premium” product purchases).`, // Uses backticks `` ` ``
+• Cost: The price of the App or services are presented appropriately. There is transparency around any costs (including in-App purchases, and “premium” product purchases).`, // 
 
     "1.3": `Explanation: This general framework may not be suitable for considering Apps designed for specific cultures or groups. Nonetheless, developers shall consider and document whether their Apps involve any culturally relevant or culturally sensitive aspects in the context of the expected user audience.
 
 As stated above, apps developed for, or expected to be used specifically by, Aboriginal and Torres Straits Islander communities should be assessed in alignment with appropriate cultural domain questions and any frameworks developed for those communities e.g. see footnote.
 
-Where the intent of the App is for broad use, the developer shall still consider whether the audience might include specific communities, and if so, the developer shall document the evidence as to how the App is expected to be usable by, and if relevant, support such groups or communities.`, // Uses backticks `` ` ``
+Where the intent of the App is for broad use, the developer shall still consider whether the audience might include specific communities, and if so, the developer shall document the evidence as to how the App is expected to be usable by, and if relevant, support such groups or communities.`, // 
 
     "1.4": `Explanation: The developer shall document evidence on how the Health App will be usable by, and support the needs of regional, rural or remote areas of Australia including (for example) whether the App functions when offline, and if so whether it has a “catch-up” facility for when it is back online, and/or whether it uses location information or local contextual information to assist such communities and shall document whether it has been tested for use by such communities.`, // Backticks also work fine for single lines
 
@@ -45,9 +44,9 @@ If the App is intended for use in consultation with a healthcare professional, t
 2.	there are no restrictive aspects of the App that would reduce accessibility (such as being unable to enlarge fonts, increase contrast, or have voice over operation). 
 3.	if relevant for the purpose of the App, evidence of options for the users to customise their experience, such as adjusting settings, usage preferences, or notification or communication elements to better suit their accessibility or personal needs. `,
     "3.2": `Explanation: The developer shall document evidence that the App has undergone usability testing with target user groups, with the results having been used to improve the App.  Evidence may include (and not be limited to) language, navigation and functionality that is clearly optimised and relevant to the target user community  `,
-    "3.3": 'Explanation: The developer shall document evidence that :
-•	the use of the App does not require a literacy, knowledge or technical hurdle that would disadvantage community members with low level of digital literacy (such as complicated language, biases in the datasets used to support or train the App.) ',
-    "3.4": 'Explanation: The developer shall document evidence that:
+    "3.3": `Explanation: The developer shall document evidence that :
+•	the use of the App does not require a literacy, knowledge or technical hurdle that would disadvantage community members with low level of digital literacy (such as complicated language, biases in the datasets used to support or train the App.) `,
+    "3.4": `Explanation: The developer shall document evidence that:
 •	shows the ease of installation and operation of the App including handling user data inputs and navigation. 
 •	demonstrates use of multi-language support, use of plain non-technical simple language – free from jargon and acronyms, and / or use of icons.
 •	shows that the reading age or readability  has been considered and / or a credible health literacy or readability checker tool has been used.`,
@@ -55,15 +54,15 @@ If the App is intended for use in consultation with a healthcare professional, t
     "4.2": `Explanation: The developer shall document evidence on how the user is informed if any user-derived data are used for specific healthcare purposes `,
     "4.3": `Explanation: The developer shall document evidence on how the user is informed about their control over data they provide to the App (or which accesses their data).
 The developer shall document evidence of compliance with all privacy policies concerning personal data`,
-    "4.4": `Explanation: •	The developer shall document evidence on how the user is informed for consent purposes with respect to collecting and using their personal data
-•	The developer shall document evidence of compliance with privacy, consumer law and any other relevant laws with respect to collecting and sharing personal and sensitive data`,
+    "4.4": `Explanation: • The developer shall document evidence on how the user is informed for consent purposes with respect to collecting and using their personal data
+• The developer shall document evidence of compliance with privacy, consumer law and any other relevant laws with respect to collecting and sharing personal and sensitive data`,
     "4.5": `Explanation: The developer shall document evidence of compliance with privacy, consumer law and any other relevant laws with respect to collecting and sharing personal and sensitive data with third parties beyond primary use of the App.`,
     "4.6": `Explanation: The developer shall document evidence of compliance with privacy, consumer law and any other relevant laws and health data exchange standards with respect to collecting, storing and exchanging health and personal data. The developer shall document evidence of how breaches of the laws with respect to the user provided data are notified and remediated.`,
     "4.7": `Explanation: The developer shall document evidence of how privacy and security are assured (use of passkeys, enforcing strong password requirements, and ensuring the expiration of authentication sessions to enhance security) and tested (penetration testing, security scans and associated remediation) and monitored (general server and client (app) side issues around security flaws in underlying code bases, operating systems) `,
     "5.1": `Explanation: The developer shall document evidence that the App is in compliance with ISO/TS 82304-2:2021 Health software — Part 2: Health and wellness Apps — Quality and reliability standard or similar standard. `,
     "5.2": `Explanation: The developer shall document evidence of how the App notifies the developer of any crashes, how the user may inform the developer of issues, and how bugs are resolved.  
 The developer shall document any platform restrictions that prohibit the App from being used on devices or operating systems that are outside of the latest update cycle.`,
-    "5.3": 'Explanation: The developer shall document evidence of efforts to train the AI models with unbiased data and to test for biases appropriate to cultures or communities who may use the App`,
+    "5.3": `Explanation: The developer shall document evidence of efforts to train the AI models with unbiased data and to test for biases appropriate to cultures or communities who may use the App`,
     "5.4": `Explanation: The developer shall document evidence of efforts to use AI in a manner that is transparent, ethical and not harmful to the user and in alignment with jurisdictional and Commonwealth laws.`,
     "5.5": `Explanation: The developer shall document evidence of compatible platforms that are supported (e.g. by statements on the App stores or websites).`,
     "5.6": `Explanation: The developer shall document evidence of how the user may obtain assistance for resolving issues and providing feedback on the product.`,
